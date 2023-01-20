@@ -1,5 +1,12 @@
 "use strict";
 function sentenceSplitter(sentence) {
-    return str.replace(/([ .,;]+)/g, '$1§sep§').split('§sep§');
+    let words = sentence.split(' ');
+    return words;
 }
-console.log('this is a test sentence');
+function combineToSetnence(...words) {
+    let wordsMerge = words.join();
+    return wordsMerge;
+}
+let sentence = 'This is a test sentence';
+console.log(sentenceSplitter(sentence));
+console.log(combineToSetnence(sentence));

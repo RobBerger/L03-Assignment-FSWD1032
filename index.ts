@@ -1,5 +1,14 @@
-function sentenceSplitter(sentence: string): Array {
-    return sentence.replace(/([ .,;]+)/g,'$1§sep§').split('§sep§');
+function sentenceSplitter(sentence: string): string[] {
+    let words: string[] = sentence.split(' ');
+    return words;
+}
+function combineToSetnence(...words: string[]) : string {
+    let wordsMerge = words.join();
+    return wordsMerge;
 }
 
-console.log('this is a test sentence');
+let sentence = 'This is a test sentence';
+
+console.log(sentenceSplitter(sentence));
+
+console.log(combineToSetnence(sentence));
